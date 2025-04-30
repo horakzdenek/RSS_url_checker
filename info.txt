@@ -1,0 +1,14 @@
+sudo apt update
+sudo apt install sqlite3
+sudo apt install apache2 php libapache2-mod-php
+sudo apt install php-sqlite3
+sudo systemctl restart apache2
+
+# in db subdir run ...
+sqlite3 db.sqlite < schema.sql
+
+chmod 664 db.sqlite
+
+# hint  
+    - in project is included sample db with account login:umpa psw:lumpa
+
